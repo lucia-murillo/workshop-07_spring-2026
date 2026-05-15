@@ -105,8 +105,9 @@ ggplot(data = sonadora_sum,
 # model
 temperature_model <- lm(
   mean_temp_c ~ elevation_m, # formula: response ~ predictor
-  data = sonadora_sum # data frame
+  data = sonadora_sum # data from summary 
   )
+
 temperature_model
 
 ```
@@ -118,7 +119,6 @@ temperature_model
 
 # displays plots in a 2x2 grid 
 par(mfrow = c(2, 2))
- 
 
 ```
 
@@ -127,6 +127,7 @@ par(mfrow = c(2, 2))
 ```{r}
 #| label: temperature-model-summary
 
+# more information about the model
 summary(temperature_model)
 
 ```
